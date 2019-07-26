@@ -56,15 +56,15 @@ pipeline {
 post {
        // only triggered when blue or green sign
        success {
-           slackSend 
+          slackSend channel: 'rivet-jenkins'
        }
        // triggered when red sign
        failure {
-           slackSend 
+        slackSend channel: 'rivet-jenkins'
        }
        // trigger every-works
        always {
-           slackSend 
+           slackSend channel: 'rivet-jenkins'
        }
 }
         }
