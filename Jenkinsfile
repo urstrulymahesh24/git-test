@@ -43,12 +43,14 @@ pipeline {
                                
 		
 			}
-			stage('slack notification') { 
+	    stage('slack notification') { 
+		     steps{
            slackSend channel: 'rivet-jenkins', 
            color: 'red', iconEmoji: '', 
            message: 'Slack', teamDomain: 'kaay', 
            tokenCredentialId: 'Jenkins-slack', 
            username: 'mahesh'
+		     }
        }
 
 
