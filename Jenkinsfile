@@ -51,10 +51,7 @@ pipeline {
            tokenCredentialId: 'Jenkins-slack', 
            username: 'mahesh'
 		     }
-       }
-
-post {
-       // only triggered when blue or green sign
+		    // only triggered when blue or green sign
        success {
           slackSend channel: 'rivet-jenkins'
        }
@@ -66,7 +63,9 @@ post {
        always {
            slackSend channel: 'rivet-jenkins'
        }
-}
+       }
+
+
         }
     }
 }
