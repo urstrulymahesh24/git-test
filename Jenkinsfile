@@ -41,11 +41,7 @@ pipeline {
 					echo 'Running the integration test..'
 				}
                                
-		  }
+			}  }
         }
-	    
-
-
     }
 }
-
